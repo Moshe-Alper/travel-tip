@@ -18,6 +18,8 @@ window.app = {
   onSetFilterBy,
 }
 
+var gUserPos = null
+
 function onInit() {
   getFilterByFromQueryParams()
   loadAndRenderLocs()
@@ -39,10 +41,16 @@ function renderLocs(locs) {
   var strHTML = locs
     .map((loc) => {
       const className = loc.id === selectedLocId ? 'active' : ''
+      let elDistanceSpan = ''
+      if (gUserPos) {
+        const distance = utilService.getDistance(gUserPos, loc.geo)
+        elDistanceSpan = `<span class="muted">Distance: ${distance} km</span`
+      }
       return `
         <li class="loc ${className}" data-id="${loc.id}">
             <h4>  
                 <span>${loc.name}</span>
+                ${elDistanceSpan}
                 <span title="${loc.rate} stars">${'★'.repeat(loc.rate)}</span>
             </h4>
             <p class="muted">
@@ -135,6 +143,7 @@ function onPanToUserPos() {
   mapService
     .getUserPosition()
     .then((latLng) => {
+    gUserPos = latLng
       mapService.panTo({...latLng, zoom: 15})
       unDisplayLoc()
       loadAndRenderLocs()
@@ -211,6 +220,10 @@ function displayLoc(loc) {
   el.querySelector('.loc-address').innerText = loc.geo.address
   el.querySelector('.loc-rate').innerHTML = '★'.repeat(loc.rate)
   el.querySelector('[name=loc-copier]').value = window.location
+  if (gUserPos) {
+    const distance = utilService.getDistance(gUserPos, loc.geo)
+    el.querySelector('.loc-distance').innerText = `Distance: ${distance} KM.`
+  }
   el.classList.add('show')
 
   utilService.updateQueryParams({locId: loc.id})
