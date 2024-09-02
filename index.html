@@ -76,21 +76,23 @@
         </section>
       </div>
       <dialog class="add-or-update-location">
-        <form method="dialog">
-            <label for="locName">Location Name:</label>
+        <form onsubmit="app.onSaveLoc(event)">
+            <input name="id" type="hidden">
+          <label for="locName">Location Name:</label>
           <input id="locName" name="locName" type="text" required />
 
           <label for="rate">Rate (1-5):</label>
-          <input id="rate" name="rate" type="number" min="1" max="5" value="0" required />
+          <input id="rate" name="rate" type="number" min="1" max="5" value="3" required />
 
           <menu>
-              <button value="confirm">Confirm</button>
-            <button value="cancel">Cancel</button>
+            <button value="confirm">Confirm</button>
+            <button class="close" onclick="app.onCloseModal(event)">✖</button> 
+
           </menu>
         </form>
       </dialog>
     </main>
-    <pre class="debug" hidden></pre>
+    <pre class="debug " hidden></pre>
     <div class="user-msg"></div>
     <script type="module" src="js/app.controller.js"></script>
   </body>
