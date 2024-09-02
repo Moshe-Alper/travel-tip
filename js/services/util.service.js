@@ -82,11 +82,11 @@ function updateQueryParams(queryParamsObj) {
 }
 
 function getColors() {
-    return ['#F44336',
-    '#FFEBEE',
+    return ['#CCD5AE',
+    '#FEFAE0',
     // '#FFCDD2',
-    '#EF9A9A',
-    '#E57373',
+    '#FAEDCE',
+    '#C0C78C',
     '#EF5350',
     '#F44336',
     '#E53935',
