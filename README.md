@@ -13,9 +13,10 @@ TravelTip is an app that keeps a list of favorite locations
 ## Locations CRUDL 
 - Create – click on the map prompts for name and rate
 - Read – Selected location details (see below) 
-- Update – can update location rate
+- Update – Open modal and can update location rate
 - Delete – can delete a location
 - List - Including filtering, sorting and grouping
+
 
 ## Selected Location
 - Displayed in the header
