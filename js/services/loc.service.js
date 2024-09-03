@@ -70,7 +70,7 @@ function remove(locId) {
     return storageService.remove(DB_KEY, locId)
 }
 
-function save(loc) {
+function save(loc) {    
     if (loc.id) {
         loc.updatedAt = Date.now()
         return storageService.put(DB_KEY, loc)
