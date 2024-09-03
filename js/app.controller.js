@@ -143,9 +143,9 @@ function onPanToUserPos() {
   mapService
     .getUserPosition()
     .then((latLng) => {
-    gUserPos = latLng
-      mapService.panTo({...latLng, zoom: 15})
       unDisplayLoc()
+      gUserPos = latLng
+      mapService.panTo({...latLng, zoom: 15})
       loadAndRenderLocs()
       flashMsg(`You are at Latitude: ${latLng.lat} Longitude: ${latLng.lng}`)
     })
