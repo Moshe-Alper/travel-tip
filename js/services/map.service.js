@@ -9,7 +9,8 @@ export const mapService = {
 }
 
 // TODO: Enter your API Key
-const API_KEY = 'AIzaSyB2Tl6TSR2BIF9Vehtx0PGargBCk_Efftk'
+// 'AIzaSyB2Tl6TSR2BIF9Vehtx0PGargBCk_Efftk' //Moshik API
+const API_KEY = 'AIzaSyBfG9cVstUG_NpdmbwmW5I0tocv94D_kdM'
 var gMap
 var gMarker
 
@@ -26,6 +27,7 @@ function initMap(lat = 32.0749831, lng = 34.9120554) {
 
 function panTo({lat, lng, zoom=15}) {
     const laLatLng = new google.maps.LatLng(lat, lng)
+    
     gMap.panTo(laLatLng)
     gMap.setZoom(zoom)
 }
