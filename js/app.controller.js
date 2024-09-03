@@ -39,18 +39,7 @@ function onInit() {
 
 function renderLocs(locs) {
   const selectedLocId = getLocIdFromQueryParams()
-    console.log('Locs:', locs)
-  const selectedLocId = getLocIdFromQueryParams()
 
-  var strHTML = locs
-    .map((loc) => {
-      const className = loc.id === selectedLocId ? 'active' : ''
-      let elDistanceSpan = ''
-      if (gUserPos) {
-        const distance = utilService.getDistance(gUserPos, loc.geo)
-        elDistanceSpan = `<span class="muted">Distance: ${distance} km</span`
-      }
-      return `
   var strHTML = locs
     .map((loc) => {
       const className = loc.id === selectedLocId ? 'active' : ''
@@ -63,7 +52,6 @@ function renderLocs(locs) {
         <li class="loc ${className}" data-id="${loc.id}">
             <h4>  
                 <span>${loc.name}</span>
-                ${elDistanceSpan}
                 ${elDistanceSpan}
                 <span title="${loc.rate} stars">${'★'.repeat(loc.rate)}</span>
             </h4>
@@ -92,7 +80,7 @@ function renderLocs(locs) {
   }
   document.querySelector('.debug').innerText = JSON.stringify(locs, null, 2)
 }
-
+  
 function onRemoveLoc(locId) {
   if (!confirm('Do you want to remove location?')) return
   locService
