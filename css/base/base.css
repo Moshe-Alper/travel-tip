@@ -4,8 +4,8 @@ body {
 }
 
 header {
-  background-color: var(--bg2);
-  color: aliceblue;
+  background-color: var(--bg1);
+  color: var( --header-color);
   padding: 0.3em;
 }
 
@@ -16,7 +16,7 @@ header h1 {
 input[type='text'],
 input[type='number'] {
   line-height: 2em;
-  background-color: var(--color1);
+  background-color: var(--input-color);
   border: 0;
 }
 
@@ -33,12 +33,11 @@ button {
 
 button:hover {
   color: var(--txt-color);
-  background-color: var(--bg3);
+  background-color: var(--bg1);
 }
 
 .muted {
   font-size: 0.9em;
-  /* color: var(--muted-color); */
   color: var(--txt-color);
 }
 
@@ -68,7 +67,7 @@ button:hover {
 .add-or-update-location label {
   margin-bottom: clamp(0.5em, 1vw, 1em);
   font-size: clamp(0.9em, 1vw, 1.2em);
-  color: var(--txt-color);
+  color: var(--input-color);
 }
 
 .add-or-update-location input[type='text'],
@@ -79,7 +78,7 @@ button:hover {
   border-radius: clamp(0.2em, 0.3vw, 0.4em);
   font-size: clamp(0.9em, 1vw, 1.1em);
   color: var(--txt-color);
-  background-color: var(--bg3); /* Add this variable if you have one */
+  background-color: var(--bg3); 
 }
 
 .close {
@@ -90,4 +89,11 @@ button:hover {
   font-size: clamp(1em, 2vw, 1.2em);
   color: var(--txt-color);
   cursor: pointer;
+}
+
+.submit-btn{
+  border: 1px solid var(--input-color);
+}
+.submit-btn:hover{
+  border: 1px solid var(--bg1);
 }

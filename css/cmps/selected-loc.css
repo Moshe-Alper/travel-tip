@@ -1,6 +1,6 @@
 .selected-loc {
     background-color: var(--bg3);
-    color: whitesmoke;
+    color: var(--txt-color);
     max-height: 0em;
     height: 0;
     overflow: hidden;
@@ -19,5 +19,5 @@
 }
 
 .loc-rate {
-    color: var(--color4);
+    color: var(--stars-color);
 }

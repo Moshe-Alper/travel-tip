@@ -3,7 +3,9 @@
     position: fixed;
     bottom: -100px;
     right: 10px;
-    background-color: #111;
+    background-color: var(--bg1);
+    color: var(--txt-color);
+    border: 1px solid snow;
     padding: 10px;
 }
 

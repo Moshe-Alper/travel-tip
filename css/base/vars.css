@@ -11,15 +11,15 @@
 
 /* Another theme */
 :root {
-    --bg1: rgb(204, 213, 174);
-    --bg2: rgb(224, 229, 182);
-    --bg3: rgb(250, 237, 206);
-    --color1: aliceblue;
+    --bg1: rgb(100, 130, 173);
+    --bg2:rgb(127, 161, 195);
+    --bg3: rgb(226, 218, 214);
+    --header-color: aliceblue;
     
     --color2: rgb(94, 169, 240); 
-    --color3: rgb(211, 187, 48);
-    --color4: rgb(90, 66, 6);
-    --muted-color:rgb(204, 213, 174);
-    --btn-bg-color:rgb(204, 213, 174);
-    --txt-color: #0b1215;
+    --input-color: #F5EDED;
+    --marked-loc-color: #102C57;
+    --stars-color: #FFCA03;
+    --btn-bg-color:rgb(127, 161, 195);
+    --txt-color:rgb(9, 38, 53);
 }

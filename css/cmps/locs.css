@@ -2,6 +2,7 @@
     background-color: var(--bg3);
     padding: 0.5em;
     min-height: 100vh;
+    color: var(--txt-color);
 }
 
 .loc-list {
@@ -11,7 +12,7 @@
 
 .loc-list li {
     padding-bottom: .2em;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--bg1);
 }
 .loc-list li h4 {
     display: flex;
@@ -19,11 +20,11 @@
 }
 
 .loc-list li.active {
-    color: var(--color3);
+    color: var(--marked-loc-color);
 }
 
 .loc-list li.active .muted{
-    color: var(--color4);
+    color: var(--txt-color);
 }
 
 .loc-btns {
@@ -48,7 +49,7 @@
     height: 2em;
 }
 .btn-user-pos:hover {
-    background-color: whitesmoke;
+    background-color: var(--bg1);
 }
 
 .loc-filter {
