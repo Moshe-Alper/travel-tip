@@ -53,7 +53,7 @@ function renderLocs(locs) {
             <h4>  
                 <span>${loc.name}</span>
                 ${elDistanceSpan}
-                <span title="${loc.rate} stars">${'★'.repeat(loc.rate)}</span>
+                <span class="stars" title="${loc.rate} stars">${'★'.repeat(loc.rate)}</span>
             </h4>
             <p class="muted">
                 Created: ${utilService.elapsedTime(loc.createdAt)}
