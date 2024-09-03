@@ -16,7 +16,9 @@ TravelTip is an app that keeps a list of favorite locations
 - Update – Open modal and can update location rate
 - Delete – can delete a location
 - List - Including filtering, sorting and grouping
-
+  * Text Filtering
+  * Sorting by Creation Time
+  * Grouping by Last Updated
 
 ## Selected Location
 - Displayed in the header
@@ -25,6 +27,7 @@ TravelTip is an app that keeps a list of favorite locations
 - Reflected in query params 
 - Copy url to clipboard
 - Share via Web-Share API
+- Distance to Location
 
 ## Location
 Here is the format of the location object:
