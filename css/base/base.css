@@ -1,6 +1,7 @@
 body {
   background-color: var(--bg1);
   overflow-x: hidden;
+  font-family: raleway-regular, sans-serif;
 }
 
 header {
@@ -9,7 +10,6 @@ header {
   padding: 0.3em;
   
 }
-
 
 header h1 {
   margin: 0;
@@ -36,6 +36,10 @@ button {
 button:hover {
   color: var(--txt-color);
   background-color: var(--bg1);
+}
+
+.logo {
+  font-family: playfair_display, serif;
 }
 
 .muted {
@@ -99,3 +103,4 @@ button:hover {
 .submit-btn:hover{
   border: 1px solid var(--bg1);
 }
+

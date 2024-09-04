@@ -1,0 +1,9 @@
+@font-face {
+    font-family: playfair_display, serif;
+    src: url(/fonts/playfair_display/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: raleway-regular, sans-serif;
+    src: url(/fonts/Raleway/Raleway-Regular.ttf);
+}
